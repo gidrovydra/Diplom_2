@@ -25,9 +25,10 @@ public class CreateOrderTest {
         stepsUser.deleteUser(auth);
     }
 
-    @Test
+
     @DisplayName("Заказ с валидными ингредиентами и авторизацией")
     @Description("Тест проверяет создание заказа с набором валидных ингредиентов и с авторизацией")
+    @Test
     public void createOrderWithValidIngrdsAndAuth() {
         stepsOrder.createOrder(auth, 1)
                 .statusCode(SC_OK)
@@ -37,9 +38,10 @@ public class CreateOrderTest {
                 .body("order.owner",notNullValue());
     }
 
-    @Test
+
     @DisplayName("Заказ с валидными ингредиентами и без авторизации")
     @Description("Тест проверяет создание заказа с набором валидных ингредиентов и без авторизации")
+    @Test
     public void createOrderWithValidIngrdsAndNoAuth() {
         stepsOrder.createOrder("", 1)
                 .statusCode(SC_OK)
