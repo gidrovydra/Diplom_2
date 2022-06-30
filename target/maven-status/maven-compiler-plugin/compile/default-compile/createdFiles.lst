@@ -1,0 +1,8 @@
+model\Ingredients.class
+client\UserApiClient.class
+client\OrderApiClient.class
+model\Ingredient.class
+model\Owner.class
+client\BaseHttpClient.class
+model\Order.class
+model\User.class
